@@ -8,6 +8,21 @@ const nextConfig = {
       '@': require('path').resolve(__dirname, 'src'),
     }
     return config
+  },
+  async redirects() {
+    return [
+      {
+        source: '/:path*',
+        has: [
+          {
+            type: 'host',
+            value: 'azadperspective.com',
+          },
+        ],
+        destination: 'https://www.azadperspective.com/:path*',
+        permanent: true,
+      },
+    ]
   }
 }
 
