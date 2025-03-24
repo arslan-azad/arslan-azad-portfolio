@@ -1,1 +1,6 @@
 import { inter } from '@/config/fonts'; 
+import type { AppProps } from 'next/app'
+
+export default function App({ Component, pageProps }: AppProps) {
+  return <Component {...pageProps} />
+} 
