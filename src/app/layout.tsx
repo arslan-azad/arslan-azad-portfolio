@@ -6,9 +6,35 @@ import Footer from '@/components/Footer'
 import { ThemeProvider } from '@/components/ThemeProvider'
 import FixedLinks from '@/components/FixedLinks'
 
+// Icon attribution: Statistics icons created by kliwir art - Flaticon
+// Source: https://www.flaticon.com/free-icons/statisctics
 export const metadata = {
-  title: 'Your Portfolio | Data Scientist',
+  title: "Arslan's Portfolio | Data Scientist",
   description: 'Welcome to my portfolio - showcasing my projects and skills in Data Science, Machine Learning and AI.',
+  icons: {
+    icon: [
+      {
+        url: '/favicon.ico',
+        sizes: 'any',
+        type: 'image/x-icon',
+      },
+      {
+        url: '/icon.png',
+        type: 'image/png',
+        sizes: '32x32',
+      },
+    ],
+    apple: {
+      url: '/apple-icon.png',
+      type: 'image/png',
+      sizes: '180x180',
+    },
+  },
+  // Adding proper attribution metadata
+  other: {
+    'icon-attribution': 'Statistics icons created by kliwir art - Flaticon',
+    'icon-source': 'https://www.flaticon.com/free-icons/statisctics'
+  }
 }
 
 export default function RootLayout({
