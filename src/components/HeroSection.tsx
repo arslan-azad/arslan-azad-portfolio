@@ -5,7 +5,7 @@ import CompetencyHexagon from './CompetencyHexagon'
 
 export default function HeroSection() {
   return (
-    <section className="min-h-screen flex flex-col justify-center gap-8 p-4 pt-24">
+    <section className="min-h-[80vh] flex flex-col justify-center gap-8 p-24">
       <div className="container">
         <motion.h1 
           initial={{ opacity: 0, y: 20 }}

@@ -3,6 +3,8 @@ import HeroSection from '@/components/HeroSection'
 import SelectedExperiences from '@/components/SelectedExperiences'
 import Testimonials from '@/components/Testimonials'
 import TechStack from '@/components/TechStack'
+import CallToAction from '@/components/CallToAction'
+import LeadershipEngagement from '@/components/LeadershipEngagement'
 
 export default function Home() {
   return (
@@ -10,6 +12,8 @@ export default function Home() {
       <HeroSection />
       <SelectedExperiences />
       <TechStack />
+      <CallToAction />
+      <LeadershipEngagement />
       <Testimonials />
     </div>
   )

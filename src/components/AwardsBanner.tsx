@@ -4,6 +4,7 @@ import { motion, useAnimationControls } from 'framer-motion'
 import { BsChevronLeft, BsChevronRight } from 'react-icons/bs'
 
 const awards = [
+  "Business Management Fellowship, OneLeague (2025)",
   "Winning team, Oxford Style Parliamentary Research Debate (2024)",
   "People's Choice Award, 3MT Research Pitch (2024)",
   "Finalist, AIIA iAwards for Industry Innovation (2024)",

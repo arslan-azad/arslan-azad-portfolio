@@ -34,13 +34,13 @@ export default function SelectedExperiences() {
   ]
 
   return (
-    <section className="py-24">
-      <div className="container mb-24">
+    <section className="pt-0">
+      <div className="container">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          className="max-w-2xl mx-auto text-center space-y-8 mb-24"
+          className="max-w-2xl mx-auto text-center space-y-8"
         >
           <motion.div
             initial={{ scale: 1 }}
@@ -53,7 +53,7 @@ export default function SelectedExperiences() {
               repeat: Infinity,
               ease: "easeInOut"
             }}
-            className="text-7xl text-foreground/80 mb-12 flex justify-center"
+            className="text-7xl text-foreground/80 flex justify-center"
           >
             <TbBulb className="w-20 h-20" />
           </motion.div>
@@ -71,13 +71,12 @@ export default function SelectedExperiences() {
             </span>
           </h2>
         </motion.div>
-        <br />
 
         <motion.h2 
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          className="text-3xl font-light mb-16"
+          className="text-3xl font-light mb-16 mt-24"
         >
           Selected Experiences
         </motion.h2>
@@ -275,7 +274,7 @@ export default function SelectedExperiences() {
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
                 transition={{ duration: 0.5 }}
-                className={`relative aspect-[4/3] rounded-2xl overflow-hidden p-12 flex items-center justify-center ${
+                className={`relative aspect-[4/3] rounded-2xl overflow-hidden p-12 flex items-center justify-center bg-gradient-to-br from-background to-background/50 ${
                   index % 2 === 1 ? 'md:order-1' : ''
                 }`}
               >
@@ -334,116 +333,132 @@ export default function SelectedExperiences() {
                   </motion.div>
                 </div>
               </motion.div>
-            ) : index === 2 ? (
-              <motion.div
-                initial={{ opacity: 0 }}
-                whileInView={{ opacity: 1 }}
-                transition={{ duration: 0.5 }}
-                className="relative aspect-[4/3] rounded-2xl overflow-hidden flex items-center justify-center bg-gradient-to-br from-background to-background/50"
-              >
-                <svg viewBox="0 0 400 300" className="w-full h-full">
-                  {/* Sales Circle */}
+            ) : (
+              <div className={`relative aspect-[4/3] rounded-2xl overflow-hidden flex items-center justify-center bg-gradient-to-br from-background to-background/50 ${
+                index % 2 === 1 ? 'md:order-1' : ''
+              }`}>
+                <svg viewBox="0 0 500 300" className="w-full h-full">
+                  {/* BUSINESS DEVELOPMENT CIRCLE */}
                   <motion.circle
-                    initial={{ scale: 0, opacity: 0 }}
-                    animate={{ scale: 1, opacity: 1 }}
-                    transition={{ duration: 0.8, delay: 0.2 }}
-                    cx="160"
-                    cy="140"
-                    r="90"
-                    className="fill-foreground/10 mix-blend-multiply"
+                    initial={{ pathLength: 0 }}
+                    animate={{ pathLength: 1 }}
+                    transition={{ duration: 1.5, ease: "easeInOut" }}
+                    cx="180"
+                    cy="100"
+                    r="85"
+                    className="fill-none stroke-[#2c5282] stroke-[1.5]"
                   />
+                  {/* Centered text inside first circle */}
                   <motion.text
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
-                    transition={{ duration: 0.5, delay: 1 }}
-                    x="120"
-                    y="140"
-                    className="text-foreground/60 text-[16px] font-light"
-                  >
-                    Sales
-                  </motion.text>
-
-                  {/* Business Development Circle */}
-                  <motion.circle
-                    initial={{ scale: 0, opacity: 0 }}
-                    animate={{ scale: 1, opacity: 1 }}
-                    transition={{ duration: 0.8, delay: 0.4 }}
-                    cx="240"
-                    cy="140"
-                    r="90"
-                    className="fill-foreground/10 mix-blend-multiply"
-                  />
-                  <motion.text
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    transition={{ duration: 0.5, delay: 1 }}
-                    x="205"
-                    y="120"
-                    className="text-foreground/60 text-[16px] font-light"
+                    transition={{ duration: 0.8, delay: 1 }}
+                    x="170"
+                    y="100"
+                    textAnchor="middle"
+                    className="text-lg font-light fill-[#2c5282]"
                   >
                     Business
                   </motion.text>
                   <motion.text
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
-                    transition={{ duration: 0.5, delay: 1 }}
-                    x="195"
-                    y="140"
-                    className="text-foreground/60 text-[16px] font-light"
+                    transition={{ duration: 0.8, delay: 1 }}
+                    x="170"
+                    y="120"
+                    textAnchor="middle"
+                    className="text-lg fill-[#2c5282]/70"
                   >
                     Development
                   </motion.text>
 
-                  {/* Customer Service Circle */}
+                  {/* SALES STRATEGY CIRCLE */}
                   <motion.circle
-                    initial={{ scale: 0, opacity: 0 }}
-                    animate={{ scale: 1, opacity: 1 }}
-                    transition={{ duration: 0.8, delay: 0.6 }}
-                    cx="200"
-                    cy="200"
-                    r="90"
-                    className="fill-foreground/10 mix-blend-multiply"
+                    initial={{ pathLength: 0 }}
+                    animate={{ pathLength: 1 }}
+                    transition={{ duration: 1.5, ease: "easeInOut" }}
+                    cx="320"
+                    cy="100"
+                    r="85"
+                    className="fill-none stroke-[#553c9a] stroke-[1.5]"
                   />
                   <motion.text
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
-                    transition={{ duration: 0.5, delay: 1 }}
-                    x="155"
-                    y="220"
-                    className="text-foreground/60 text-[16px] font-light"
+                    transition={{ duration: 0.8, delay: 1 }}
+                    x="320"
+                    y="110"
+                    textAnchor="middle"
+                    className="text-lg font-light fill-[#553c9a]"
                   >
-                    Customer Service
+                    Sales
                   </motion.text>
 
-                  {/* Central Intersection Animation */}
+                  {/* CUSTOMER SERVICE CIRCLE */}
                   <motion.circle
-                    initial={{ scale: 0.8, opacity: 0 }}
-                    animate={{ 
-                      scale: [0.8, 0.85, 0.8],
-                      opacity: 0.3
-                    }}
-                    transition={{
-                      duration: 3,
-                      repeat: Infinity,
-                      ease: "easeInOut"
-                    }}
-                    cx="200"
-                    cy="160"
-                    r="35"
-                    className="fill-foreground/20"
+                    initial={{ pathLength: 0 }}
+                    animate={{ pathLength: 1 }}
+                    transition={{ duration: 1.5, ease: "easeInOut" }}
+                    cx="250"
+                    cy="230"
+                    r="85"
+                    className="fill-none stroke-[#2f855a] stroke-[1.5]"
+                  />
+                  <motion.text
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ duration: 0.8, delay: 1 }}
+                    x="250"
+                    y="230"
+                    textAnchor="middle"
+                    className="text-lg font-light fill-[#2f855a]"
+                  >
+                    Customer
+                  </motion.text>
+                  <motion.text
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ duration: 0.8, delay: 1 }}
+                    x="250"
+                    y="250"
+                    textAnchor="middle"
+                    className="text-lg fill-[#2f855a]/70"
+                  >
+                    Service
+                  </motion.text>
+
+                  {/* Overlapping SECTIONS */}
+                  <motion.path
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 0.6 }}
+                    transition={{ duration: 0.8, delay: 1.4 }}
+                    d="M250,150 A85,85 0 0,0 180,150 A85,85 0 0,1 250,150"
+                    className="fill-[#2c5282]/30"
+                  />
+                  <motion.path
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 0.6 }}
+                    transition={{ duration: 0.8, delay: 1.4 }}
+                    d="M250,230 A85,85 0 0,0 250,150 A85,85 0 0,1 250,230"
+                    className="fill-[#553c9a]/30"
+                  />
+                  <motion.path
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 0.6 }}
+                    transition={{ duration: 0.8, delay: 1.4 }}
+                    d="M180,230 A85,85 0 0,0 250,230 A85,85 0 0,1 180,230"
+                    className="fill-[#2f855a]/30"
+                  />
+
+                  {/* Center Overlap */}
+                  <motion.path
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 0.8 }}
+                    transition={{ duration: 0.8, delay: 1.8 }}
+                    d="M230,180 A25,25 0 0,0 250,190 A25,25 0 0,0 230,200 A25,25 0 0,0 210,190 A25,25 0 0,0 230,180"
+                    className="fill-white/20"
                   />
                 </svg>
-              </motion.div>
-            ) : (
-              <div className={`relative aspect-[4/3] rounded-lg overflow-hidden ${
-                index % 2 === 1 ? 'md:order-1' : ''
-              }`}>
-                <Image
-                  src={exp.image}
-                  alt={`${exp.title} at ${exp.company}`}
-                  fill
-                  className="object-cover"
-                />
               </div>
             )}
           </motion.div>
@@ -453,4 +468,4 @@ export default function SelectedExperiences() {
       <AwardsBanner />
     </section>
   )
-} 
+}
