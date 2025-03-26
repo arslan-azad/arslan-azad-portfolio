@@ -5,13 +5,13 @@ import CompetencyHexagon from './CompetencyHexagon'
 
 export default function HeroSection() {
   return (
-    <section className="min-h-[80vh] flex flex-col justify-center gap-8 p-24">
+    <section className="min-h-[80vh] flex flex-col justify-center gap-8 px-4 py-24 sm:p-24">
       <div className="container">
         <motion.h1 
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="text-[12vw] leading-none font-light"
+          className="text-4xl sm:text-5xl md:text-6xl lg:text-[8vw] leading-none font-light"
         >
           Data & AI Portfolio
         </motion.h1>
