@@ -1,11 +1,19 @@
 'use client'
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { useTheme } from 'next-themes'
 import { motion } from 'framer-motion'
 import { BsSun, BsMoon } from 'react-icons/bs'
 
 export function ModeToggle() {
   const { theme, setTheme } = useTheme()
+  const [mounted, setMounted] = useState(false)
+
+  useEffect(() => {
+    setMounted(true)
+  }, [])
+
+  // Prevent hydration mismatch by not rendering theme-dependent icon until mounted
+  const iconToRender = mounted ? (theme === 'light' ? <BsMoon className="w-4 h-4" /> : <BsSun className="w-4 h-4" />) : null
 
   return (
     <motion.button
@@ -16,7 +24,7 @@ export function ModeToggle() {
       className="p-2 text-sm text-foreground/60 hover:text-foreground transition-colors"
       aria-label="Toggle theme"
     >
-      {theme === 'light' ? <BsMoon className="w-4 h-4" /> : <BsSun className="w-4 h-4" />}
+      {iconToRender}
     </motion.button>
   )
 } 
