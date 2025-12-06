@@ -1,7 +1,9 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
-  swcMinify: true,
+  // `swcMinify` is no longer a valid next.config option in newer Next.js versions.
+  // Leave minification to Next.js defaults / the selected bundler.
+  turbopack: {},
   webpack: (config) => {
     config.resolve.alias = {
       ...config.resolve.alias,
