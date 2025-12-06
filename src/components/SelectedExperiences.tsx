@@ -18,7 +18,7 @@ export default function SelectedExperiences() {
     {
       title: "University Lecturer, Data Science",
       company: "University of South Australia",
-      period: "Feb 2025 – Present",
+      period: "Feb 2025 - Jul 2025",
       description: "Teaching Design Thinking & Data Visualisation, Statistical Methods, Social Media Analytics, and Machine Learning. Designing industry-aligned curricula and advancing Generative AI in education for AI-driven learning solutions.",
       image: "/images/teaching.jpg",
       tech: ["Python", "R", "Machine Learning", "LangGraph", "Statistical Analysis", "Design Thinking", "Data Visualisation"]
