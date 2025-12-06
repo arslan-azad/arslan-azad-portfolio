@@ -8,7 +8,15 @@ import { TbBulb } from 'react-icons/tb'
 export default function SelectedExperiences() {
   const experiences = [
     {
-      title: "University Lecturer - Data Science",
+      title: "Consultant, AI/ML Engineer",
+      company: "Deloitte Australia Pty Ltd",
+      period: "Jul 2025 – Present",
+      description: "Leverage technical depth in AI and ML as well as a breadth of functional expertise in requirements gathering, scope definition, stakeholder alignment and project management to drive long term competitive advantage for enterprises by helping materialise high-impact transformation projects.",
+      image: "/images/consulting-ai.jpg",
+      tech: ["Artificial Intelligence", "Machine Learning", "Stakeholder Management", "Business Analytics", "Python", "Google Cloud", "Microsoft Azure"]
+    },
+    {
+      title: "University Lecturer, Data Science",
       company: "University of South Australia",
       period: "Feb 2025 – Present",
       description: "Teaching Design Thinking & Data Visualisation, Statistical Methods, Social Media Analytics, and Machine Learning. Designing industry-aligned curricula and advancing Generative AI in education for AI-driven learning solutions.",
@@ -19,7 +27,7 @@ export default function SelectedExperiences() {
       title: "PhD Researcher, Data Science",
       company: "University of South Australia",
       period: "Jul 2021 – Dec 2024",
-      description: "Leveraged predictive modeling and advanced network analysis approaches to predict human behaviours. Devised novel indicators, metrics and visualisations to deliver actionable insights for decision makers. \n Enhanced global healthcare strategy by analysing data for the Geneva Learning Foundation, optimising COVID-19 immunization training for 4,000+ professionals.",
+      description: "Leveraged feature engineering, predictive modeling and advanced network analysis approaches to predict human behaviours from audio data. Devised novel indicators, metrics and visualisations to deliver actionable insights for decision makers. \n Enhanced global healthcare strategy by analysing data for the Geneva Learning Foundation, optimising COVID-19 immunization training for 4,000+ professionals.",
       image: "/images/research.jpg",
       tech: ["Python", "C++", "Predictive Modeling", "Data Analysis", "Healthcare Analytics"]
     },
@@ -115,6 +123,25 @@ export default function SelectedExperiences() {
             </div>
             
             {index === 0 ? (
+              // Deloitte Logo
+              <motion.div 
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                transition={{ duration: 0.5 }}
+                className="relative aspect-[4/3] rounded-2xl overflow-hidden flex items-center justify-center bg-white"
+              >
+                <div className="flex items-baseline gap-1">
+                  <div className="text-7xl font-bold text-black">Deloitte</div>
+                  <motion.div
+                    initial={{ scale: 0 }}
+                    whileInView={{ scale: 1 }}
+                    transition={{ duration: 0.5, delay: 0.3 }}
+                    className="w-5 h-5 bg-green-500 rounded-full"
+                  />
+                </div>
+              </motion.div>
+            ) : index === 1 ? (
+              // Neural Network Grid for University Lecturer
               <motion.div 
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
@@ -269,7 +296,8 @@ export default function SelectedExperiences() {
                   ))}
                 </svg>
               </motion.div>
-            ) : index === 1 ? (
+            ) : index === 2 ? (
+              // PhD Hat for PhD Researcher
               <motion.div
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
@@ -334,6 +362,7 @@ export default function SelectedExperiences() {
                 </div>
               </motion.div>
             ) : (
+              // Circles for Freelance and other roles
               <div className={`relative aspect-[4/3] rounded-2xl overflow-hidden flex items-center justify-center bg-gradient-to-br from-background to-background/50 ${
                 index % 2 === 1 ? 'md:order-1' : ''
               }`}>

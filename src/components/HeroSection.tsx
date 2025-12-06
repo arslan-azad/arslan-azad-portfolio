@@ -30,7 +30,10 @@ export default function HeroSection() {
             <p className="text-sm uppercase tracking-wider mb-4">
               Hello there
               <br /> 
-              I'm Arslan, a full-stack data scientist.
+              I'm Arslan.
+              <br />
+              <br />
+              Ask me about data science (PhD) and business (MBA).
             </p>
             <button className="border rounded-full px-8 py-2 text-sm uppercase tracking-wider">
               Scroll to explore ↓

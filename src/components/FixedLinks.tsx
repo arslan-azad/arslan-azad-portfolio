@@ -21,14 +21,6 @@ export default function FixedLinks() {
         >
           LinkedIn
         </a>
-       <a 
-          href="https://github.com/arslan-azad" 
-          target="_blank" 
-          rel="noopener noreferrer"
-          className="hover:text-foreground/80 transition-colors"
-        >
-          GitHub
-        </a>
       </motion.div>
       
       <motion.div
