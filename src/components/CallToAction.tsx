@@ -2,7 +2,6 @@
 import React from 'react'
 import Link from 'next/link'
 import { motion } from 'framer-motion'
-import { BsArrowRight } from 'react-icons/bs'
 
 export default function CallToAction() {
   return (
@@ -54,7 +53,9 @@ export default function CallToAction() {
             >
               <span className="flex items-center gap-2">
                 Résumé
-                <BsArrowRight className="transition-transform group-hover:translate-x-1" />
+                <svg className="transition-transform group-hover:translate-x-1 w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                  <path d="M5 12h14M13 5l7 7-7 7" />
+                </svg>
               </span>
               <motion.span
                 initial={{ width: 0 }}

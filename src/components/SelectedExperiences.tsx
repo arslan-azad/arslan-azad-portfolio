@@ -3,7 +3,6 @@ import React from 'react'
 import { motion } from 'framer-motion'
 import Image from 'next/image'
 import AwardsBanner from './AwardsBanner'
-import { TbBulb } from 'react-icons/tb'
 
 export default function SelectedExperiences() {
   const experiences = [
@@ -13,7 +12,7 @@ export default function SelectedExperiences() {
       period: "Jul 2025 – Present",
       description: "Leverage technical depth in AI and ML as well as a breadth of functional expertise in requirements gathering, scope definition, stakeholder alignment and project management to drive long term competitive advantage for enterprises by helping materialise high-impact transformation projects.",
       image: "/images/consulting-ai.jpg",
-      tech: ["Artificial Intelligence", "Machine Learning", "Stakeholder Management", "Business Analytics", "Python", "Google Cloud", "Microsoft Azure"]
+      tech: ["Stakeholder Management", "Artificial Intelligence", "Machine Learning", "Business Analytics", "Python", "Google Cloud", "Microsoft Azure"]
     },
     {
       title: "University Lecturer, Data Science",
@@ -27,15 +26,15 @@ export default function SelectedExperiences() {
       title: "PhD Researcher, Data Science",
       company: "University of South Australia",
       period: "Jul 2021 – Dec 2024",
-      description: "Leveraged feature engineering, predictive modeling and advanced network analysis approaches to predict human behaviours from audio data. Devised novel indicators, metrics and visualisations to deliver actionable insights for decision makers. \n Enhanced global healthcare strategy by analysing data for the Geneva Learning Foundation, optimising COVID-19 immunization training for 4,000+ professionals.",
+      description: "Leveraged feature engineering, predictive modeling (Generalised Linear Models) and advanced network analysis approaches to predict human behaviours from audio data. Devised novel indicators, metrics and visualisations to deliver actionable insights for data-driven decision making.\n Enhanced global healthcare strategy by analysing data for the Geneva Learning Foundation, optimising COVID-19 immunization training for 4,000+ professionals.",
       image: "/images/research.jpg",
-      tech: ["Python", "C++", "Predictive Modeling", "Data Analysis", "Healthcare Analytics"]
+      tech: ["Python", "C++", "Predictive Modeling", "Data Analysis"]
     },
     {
       title: "Freelance Consultant",
       company: "Fiverr",
       period: "Apr 2016 – Jul 2018",
-      description: "Generated 177+ successful proposals for 501(c)3 nonprofits, achieving 99% satisfaction rating. Created ROI-driven proposals expanding client portfolios across 12%+ countries globally.",
+      description: "Successfully delivered 177+ projects including grant proposals for 501(c)3 nonprofits and business development for small businesses, achieving 99% satisfaction rating with a 100% project completion rate. Created ROI-driven proposals expanding client portfolios across 12%+ countries globally.",
       image: "/images/consulting.jpg",
       tech: ["Grant Writing", "Proposal Development", "Business Development"]
     }
@@ -63,11 +62,15 @@ export default function SelectedExperiences() {
             }}
             className="text-7xl text-foreground/80 flex justify-center"
           >
-            <TbBulb className="w-20 h-20" />
+            <svg className="w-20 h-20 text-foreground/80" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+              <path d="M9 18h6" />
+              <path d="M10 22h4" />
+              <path d="M12 2a7 7 0 00-3 13v2h6v-2a7 7 0 00-3-13z" />
+            </svg>
           </motion.div>
           
           <h2 className="text-xl font-light">
-            I have created measurable business impact using all types of data, from time-series (continuous) to categorical, across business contexts.
+            A track-record of delivering measurable business impact by combining deep business acumen with advanced expertise in machine learning and data science.
             <br />
             <br />
             I am

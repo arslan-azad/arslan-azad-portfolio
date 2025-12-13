@@ -1,7 +1,6 @@
 'use client'
 import React, { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
-import { BsChevronLeft, BsChevronRight } from 'react-icons/bs'
 
 const leadershipRoles = [
   {
@@ -187,7 +186,9 @@ export default function LeadershipEngagement() {
                 exit={{ opacity: 0 }}
                 className="flex items-center justify-center w-8 h-8 rounded-full bg-white/10 backdrop-blur-sm border border-white/20"
               >
-                <BsChevronLeft className="w-4 h-4 text-gray-400" />
+                <svg className="w-4 h-4 text-gray-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                  <polyline points="15 18 9 12 15 6" />
+                </svg>
               </motion.div>
             </div>
           )}
@@ -199,7 +200,9 @@ export default function LeadershipEngagement() {
                 exit={{ opacity: 0 }}
                 className="flex items-center justify-center w-8 h-8 rounded-full bg-white/10 backdrop-blur-sm border border-white/20"
               >
-                <BsChevronRight className="w-4 h-4 text-gray-400" />
+                <svg className="w-4 h-4 text-gray-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                  <polyline points="9 18 15 12 9 6" />
+                </svg>
               </motion.div>
             </div>
           )}

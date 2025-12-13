@@ -6,44 +6,55 @@ import { SiPython, SiR, SiTensorflow, SiScikitlearn, SiPandas, SiNumpy,
          SiGit, SiDocker, SiAmazon, SiCplusplus } from 'react-icons/si'
 import { TbBrain } from 'react-icons/tb'
 import { BsGraphUp, BsFiletypeXlsx, BsBarChartFill } from 'react-icons/bs'
+import type { IconType } from 'react-icons'
 
-const techCategories = [
+type ToolItem = {
+  name: string
+  icon: React.ComponentType<{ className?: string }>
+}
+
+type TechCategory = {
+  title: string
+  tools: ToolItem[]
+}
+
+const techCategories: TechCategory[] = [
   {
     title: "Data Science & Analytics",
     tools: [
-      { name: "Python", icon: <SiPython /> },
-      { name: "R", icon: <SiR /> },
-      { name: "TensorFlow", icon: <SiTensorflow /> },
-      { name: "Scikit-learn", icon: <SiScikitlearn /> },
-      { name: "Pandas", icon: <SiPandas /> },
-      { name: "NumPy", icon: <SiNumpy /> }
+      { name: "Python", icon: SiPython as unknown as React.ComponentType<{ className?: string }> },
+      { name: "R", icon: SiR as unknown as React.ComponentType<{ className?: string }> },
+      { name: "TensorFlow", icon: SiTensorflow as unknown as React.ComponentType<{ className?: string }> },
+      { name: "Scikit-learn", icon: SiScikitlearn as unknown as React.ComponentType<{ className?: string }> },
+      { name: "Pandas", icon: SiPandas as unknown as React.ComponentType<{ className?: string }> },
+      { name: "NumPy", icon: SiNumpy as unknown as React.ComponentType<{ className?: string }> }
     ]
   },
   {
     title: "Business Intelligence",
-    tools: [
-      { name: "Tableau", icon: <SiTableau /> },
-      { name: "Power BI", icon: <BsBarChartFill /> },
-      { name: "Excel", icon: <BsFiletypeXlsx /> },
-      { name: "SQL", icon: <SiMysql /> }
+      tools: [
+      { name: "Tableau", icon: SiTableau as unknown as React.ComponentType<{ className?: string }> },
+      { name: "Power BI", icon: BsBarChartFill as unknown as React.ComponentType<{ className?: string }> },
+      { name: "Excel", icon: BsFiletypeXlsx as unknown as React.ComponentType<{ className?: string }> },
+      { name: "SQL", icon: SiMysql as unknown as React.ComponentType<{ className?: string }> }
     ]
   },
   {
     title: "AI & Machine Learning",
-    tools: [
-      { name: "LangGraph", icon: <TbBrain /> },
-      { name: "NLP", icon: <TbBrain /> },
-      { name: "Predictive Modeling", icon: <BsGraphUp /> },
-      { name: "Forecasting", icon: <BsGraphUp /> }
+      tools: [
+      { name: "LangGraph", icon: TbBrain as unknown as React.ComponentType<{ className?: string }> },
+      { name: "NLP", icon: TbBrain as unknown as React.ComponentType<{ className?: string }> },
+      { name: "Predictive Modeling", icon: BsGraphUp as unknown as React.ComponentType<{ className?: string }> },
+      { name: "Forecasting", icon: BsGraphUp as unknown as React.ComponentType<{ className?: string }> }
     ]
   },
   {
     title: "Development Tools",
     tools: [
-      { name: "Git", icon: <SiGit /> },
-      { name: "Docker", icon: <SiDocker /> },
-      { name: "AWS", icon: <SiAmazon /> },
-      { name: "C++", icon: <SiCplusplus /> }
+      { name: "Git", icon: SiGit as unknown as React.ComponentType<{ className?: string }> },
+      { name: "Docker", icon: SiDocker as unknown as React.ComponentType<{ className?: string }> },
+      { name: "AWS", icon: SiAmazon as unknown as React.ComponentType<{ className?: string }> },
+      { name: "C++", icon: SiCplusplus as unknown as React.ComponentType<{ className?: string }> }
     ]
   }
 ]
@@ -88,17 +99,20 @@ export default function TechStack() {
               >
                 <h3 className="text-xl font-light mb-4">{category.title}</h3>
                 <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6">
-                  {category.tools.map((tool) => (
-                    <div 
-                      key={tool.name}
-                      className="flex items-center gap-3 text-gray-400 hover:text-white transition-colors group"
-                    >
-                      <span className="text-xl group-hover:text-blue-400 transition-colors">
-                        {tool.icon}
-                      </span>
-                      <span className="text-sm">{tool.name}</span>
-                    </div>
-                  ))}
+                  {category.tools.map((tool) => {
+                    const Icon = tool.icon
+                    return (
+                      <div 
+                        key={tool.name}
+                        className="flex items-center gap-3 text-gray-400 hover:text-white transition-colors group"
+                      >
+                        <span className="text-xl group-hover:text-blue-400 transition-colors">
+                          <Icon className="w-6 h-6" />
+                        </span>
+                        <span className="text-sm">{tool.name}</span>
+                      </div>
+                    )
+                  })}
                 </div>
               </motion.div>
             ))}
