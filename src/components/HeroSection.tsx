@@ -30,7 +30,7 @@ export default function HeroSection() {
             <p className="text-sm uppercase tracking-wider mb-4">
               Hello there
               <br /> 
-              I'm Arslan.
+              I&apos;m Arslan.
               <br />
               <br />
               Ask me about data science (PhD) and business (MBA).

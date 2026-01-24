@@ -6,7 +6,6 @@ import { SiPython, SiR, SiTensorflow, SiScikitlearn, SiPandas, SiNumpy,
          SiGit, SiDocker, SiAmazon, SiCplusplus } from 'react-icons/si'
 import { TbBrain } from 'react-icons/tb'
 import { BsGraphUp, BsFiletypeXlsx, BsBarChartFill } from 'react-icons/bs'
-import type { IconType } from 'react-icons'
 
 type ToolItem = {
   name: string

@@ -14,8 +14,7 @@ const awards = [
   "Quick Learner Award, UniSA International (2020)"
 ]
 
-// Duplicate awards to create seamless loop
-const duplicatedAwards = [...awards, ...awards]
+// Duplicate awards to create seamless loop (currently unused but kept for future implementation)
 
 export default function AwardsBanner() {
   const [isHovered, setIsHovered] = useState(false)
@@ -56,7 +55,7 @@ export default function AwardsBanner() {
         }
       })
     }
-  }, [isHovered, controls, awards.length, cardWidth, cardGap])
+  }, [isHovered, controls])
 
   return (
     <div className="w-full overflow-hidden bg-background">
