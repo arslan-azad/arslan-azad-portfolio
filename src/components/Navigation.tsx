@@ -12,7 +12,7 @@ export default function Navigation() {
     { href: "/", label: "Home" },
     { href: "/about", label: "About" },
     { 
-      href: "https://drive.google.com/file/d/1iuYzOA0pTdzDeCeScZmIcuceH3cELJww/view?usp=sharing",
+      href: "https://drive.google.com/file/d/1M5JGcNHizBudWRdSTeKtdUs99D0ToO45/view?usp=sharing",
       label: "Résumé",
       isExternal: true 
     }
