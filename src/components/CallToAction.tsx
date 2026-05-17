@@ -46,7 +46,7 @@ export default function CallToAction() {
             </Link>
 
             <Link 
-              href="https://drive.google.com/file/d/1O06sw0jA5APauq9sWJgkcHEfc1zdwX9g/view?usp=sharing"
+              href="https://drive.google.com/file/d/11I5dI8BEdehkW9aoZ9rgH7GhYDfDsxV_/view?usp=sharing"
               target="_blank"
               rel="noopener noreferrer"
               className="group relative inline-flex items-center justify-center px-8 py-3 text-sm tracking-wider uppercase transition-all duration-300 ease-out border rounded-full hover:bg-foreground hover:text-background"
